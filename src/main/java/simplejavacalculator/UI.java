@@ -82,14 +82,24 @@ public class UI implements ActionListener {
    private final JButton butabs;
    /**This is a binary button.*/
    private final JButton butBinary;
+   /**This is a calculator.*/
    private final Calculator calc;
+   /**This is a list of button values.*/
    private final String[] buttonValue = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+   /**This is a font.*/
    private final Font font;
+   /**This is a font of text.*/
    private final Font textFont;
+   /**This is a size of font.*/
    final int font_size = 18;
+   /**This is a size of font of text.*/
    final int textFont_size = 24;
+   /**This is a size of a button.*/
    final int JButton_size = 10;
+   /**This is a frame size.*/
    final int frame_size = 450;
+   /**This is a border of text area.*/
+   final int border_text = 30;
 
    public UI() throws IOException {
       frame = new JFrame("Calculator PH");
@@ -106,7 +116,7 @@ public class UI implements ActionListener {
       panelSub8 = new JPanel(new FlowLayout());
 
       font = new Font("Consolas", Font.PLAIN, font_size);
-      text = new JTextArea(1, 30);
+      text = new JTextArea(1, border_text);
 
       textFont = new Font("Consolas", Font.BOLD, textFont_size);
 
