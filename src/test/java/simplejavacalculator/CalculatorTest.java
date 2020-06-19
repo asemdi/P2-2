@@ -20,6 +20,12 @@ public class CalculatorTest {
         Double result = c.calculateMono(Calculator.MonoOperatorModes.SQUAREROOT, 49.0);
         Assert.assertEquals((Double) 7.0, result);
     }
+    @Test
+    public void Testing_SQUAREROOT_2() {
+        Calculator c = new Calculator();
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.SQUAREROOT, -49.0);
+        Assert.assertEquals((Double) NaN, result);
+    }
     //ONEDEVIDEDBY
     @Test
     public void Testing_ONEDEVIDEDBY_1() {
