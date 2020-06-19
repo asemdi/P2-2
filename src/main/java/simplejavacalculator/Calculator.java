@@ -42,7 +42,7 @@ public class Calculator {
 
     private Double num1;
     private Double num2; /* Second number to perform calculations on */
-    private BiOperatorModes mode = BiOperatorModes.NORMAL; /* Specifies what calculation to perform */
+    private  /* Specifies what calculation to perform */BiOperatorModes mode = BiOperatorModes.NORMAL;
 
     private Double calculateBiImpl() {
         if (mode == BiOperatorModes.NORMAL) {

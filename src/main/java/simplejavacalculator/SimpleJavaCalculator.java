@@ -9,15 +9,19 @@
 package simplejavacalculator;
 
 public class SimpleJavaCalculator {
-   
-   public static void main(String[] args) {
+   protected SimpleJavaCalculator() {
+      throw new UnsupportedOperationException();
+   }
+   /**
+    * Start the calculator.
+    * @param args just arguments jesus why do i need to specify this
+    */
+   public static void main(final String[] args) {
       try {
          UI uiCal = new UI();
          uiCal.init();
+      } catch (Exception e) {
+         System.out.println(e.getMessage());
       }
-      catch (Exception e) {
-         System.out.println(e.getMessage());   
-      }
-      
    }
 }
