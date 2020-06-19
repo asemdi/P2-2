@@ -55,9 +55,12 @@ public class Calculator {
         ABS
     }
 
+    /**First number to perform calculations on.*/
     private Double num1;
-    private Double num2; /* Second number to perform calculations on */
-    private  /* Specifies what calculation to perform */BiOperatorModes mode = BiOperatorModes.NORMAL;
+    /**Second number to perform calculations on.*/
+    private Double num2;
+    /**Normal*/
+    private BiOperatorModes mode = BiOperatorModes.NORMAL;
 
     private Double calculateBiImpl() {
         if (mode == BiOperatorModes.NORMAL) {
