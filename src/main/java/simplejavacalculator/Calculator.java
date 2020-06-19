@@ -15,7 +15,7 @@ import static java.lang.Math.pow;
 public class Calculator {
 
     public enum BiOperatorModes {
-        /* Checks if number is normal */normal,
+        /* Checks if number is NORMAL */NORMAL,
         /* Adds two numbers */add,
         /* Subtracts one number from another */minus,
         /* Multiplies two numbers */multiply,
@@ -35,10 +35,10 @@ public class Calculator {
     }
 
     private Double num1, /* Second number to perform calculations on */ num2;
-    private  /* Specifies what calculation to perform */BiOperatorModes mode = BiOperatorModes.normal;
+    private  /* Specifies what calculation to perform */BiOperatorModes mode = BiOperatorModes.NORMAL;
 
     private Double calculateBiImpl() {
-        if (mode == BiOperatorModes.normal) {
+        if (mode == BiOperatorModes.NORMAL) {
             return num2;
         }
         if (mode == BiOperatorModes.add) {
@@ -66,7 +66,7 @@ public class Calculator {
     }
 
     public Double calculateBi(BiOperatorModes newMode, Double num) {
-        if (mode == BiOperatorModes.normal) {
+        if (mode == BiOperatorModes.NORMAL) {
             num2 = 0.0;
             num1 = num;
             mode = newMode;
@@ -80,13 +80,13 @@ public class Calculator {
     }
 
     public Double calculateEqual(Double num) {
-        return calculateBi(BiOperatorModes.normal, num);
+        return calculateBi(BiOperatorModes.NORMAL, num);
     }
 
     public Double reset() {
         num2 = 0.0;
         num1 = 0.0;
-        mode = BiOperatorModes.normal;
+        mode = BiOperatorModes.NORMAL;
 
         return NaN;
     }
