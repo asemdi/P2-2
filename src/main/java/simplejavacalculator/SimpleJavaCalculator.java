@@ -8,15 +8,20 @@
 
 package simplejavacalculator;
 
-class SimpleJavaCalculator {
+public class SimpleJavaCalculator {
+   protected SimpleJavaCalculator(){
+      throw new UnsupportedOperationException();
+   }
    /**
     * Start the calculator.
+    * @param args just arguments jesus why do i need to specify this
+    * @return     null
     */
    public static void main(final String[] args) {
       try {
          UI uiCal = new UI();
          uiCal.init();
-      }catch (Exception e) {
+      } catch (Exception e) {
          System.out.println(e.getMessage());
       }
    }
