@@ -48,6 +48,10 @@ public class UI implements ActionListener {
    
    private final Font font;
    private final Font textFont;
+   final int font_size = 18;
+   final int textFont_size = 24;
+   final int JButton_size = 10;
+   final int frame_size= 450;
 
    
    public UI() throws IOException {
@@ -64,15 +68,15 @@ public class UI implements ActionListener {
       panelSub6 = new JPanel(new FlowLayout());
       panelSub7 = new JPanel(new FlowLayout());
       panelSub8 = new JPanel(new FlowLayout());
-      
-      font = new Font("Consolas", Font.PLAIN, 18);
+
+      font = new Font("Consolas", Font.PLAIN, font_size);
       
       text = new JTextArea(1, 30);
-      
-      textFont = new Font("Consolas", Font.BOLD, 24);
-      
-      but = new JButton[10];      
-      for (int i = 0; i < 10; i++) {
+
+      textFont = new Font("Consolas", Font.BOLD, textFont_size);
+
+      but = new JButton[JButton_size];
+      for (int i = 0; i < JButton_size; i++) {
          but[i] = new JButton(String.valueOf(i));
       }      
       butAdd = new JButton("+");      
@@ -97,8 +101,8 @@ public class UI implements ActionListener {
       
    }
    
-   public void init() {      
-      frame.setSize(450, 450);
+   public void init() {
+      frame.setSize(frame_size, frame_size);
       frame.setVisible(true);
       frame.setLocationRelativeTo(null); 
       frame.setResizable(false);
@@ -107,8 +111,9 @@ public class UI implements ActionListener {
       
       text.setFont(textFont);
       text.setEditable(false);
-      
-      for (int i = 0; i < 10; i++) {
+
+
+      for (int i = 0; i < JButton_size; i++) {
          but[i].setFont(font);
       }      
       butAdd.setFont(font);
@@ -127,16 +132,18 @@ public class UI implements ActionListener {
       butrate.setFont(font);
       butabs.setFont(font);
       butCancel.setFont(font);
-      butBinary.setFont(font); 
-      
-      panel.add(Box.createHorizontalStrut(100));
+      butBinary.setFont(font);
+
+      final int panelSub1_size = 100;
+      panel.add(Box.createHorizontalStrut(panelSub1_size));
       panelSub1.add(text);
       panel.add(panelSub1);
-      
+
+      final int panelSub234_size = 15;
       panelSub2.add(but[1]);
       panelSub2.add(but[2]);
       panelSub2.add(but[3]);
-      panelSub2.add(Box.createHorizontalStrut(15));
+      panelSub2.add(Box.createHorizontalStrut(panelSub234_size));
       panelSub2.add(butAdd);
       panelSub2.add(butMinus);
       panel.add(panelSub2);
@@ -144,7 +151,7 @@ public class UI implements ActionListener {
       panelSub3.add(but[4]);
       panelSub3.add(but[5]);
       panelSub3.add(but[6]);
-      panelSub3.add(Box.createHorizontalStrut(15));
+      panelSub3.add(Box.createHorizontalStrut(panelSub234_size));
       panelSub3.add(butMultiply);
       panelSub3.add(butDivide);      
       panel.add(panelSub3);
@@ -152,13 +159,14 @@ public class UI implements ActionListener {
       panelSub4.add(but[7]);
       panelSub4.add(but[8]);
       panelSub4.add(but[9]);
-      panelSub4.add(Box.createHorizontalStrut(15));
+      panelSub4.add(Box.createHorizontalStrut(panelSub234_size));
       panelSub4.add(butEqual);
       panelSub4.add(butCancel);
       panel.add(panelSub4);
-      
+
+      final int panelSub5_size = 210;
       panelSub5.add(but[0]);
-      panelSub5.add(Box.createHorizontalStrut(210));
+      panelSub5.add(Box.createHorizontalStrut(panelSub5_size));
       panel.add(panelSub5);
       
       panelSub6.add(butSquare);
@@ -178,7 +186,7 @@ public class UI implements ActionListener {
       panelSub8.add(butBinary);
       panel.add(panelSub8);
       
-      for (int i = 0; i < 10; i++) {
+      for (int i = 0; i < JButton_size; i++) {
          but[i].addActionListener(this);
       }      
       butAdd.addActionListener(this);
@@ -207,7 +215,7 @@ public class UI implements ActionListener {
    public void actionPerformed(ActionEvent e) {
       final Object source = e.getSource();
       
-      for (int i = 0; i < 10; i++) {
+      for (int i = 0; i < JButton_size; i++) {
          if (source == but[i]) {
             text.replaceSelection(buttonValue[i]);
             return;
