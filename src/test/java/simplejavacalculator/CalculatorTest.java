@@ -40,5 +40,26 @@ public class CalculatorTest {
         c.calculateBi(Calculator.BiOperatorModes.minus, 101.0);
         Assert.assertEquals((Double) 49.5, c.calculateBi(Calculator.BiOperatorModes.normal, 51.5));
     }
+
+    @Test
+    public void Testing_multiply() {
+        Calculator c = new Calculator();
+        c.calculateBi(Calculator.BiOperatorModes.multiply, 3.0);
+        Assert.assertEquals((Double) 12.0, c.calculateBi(Calculator.BiOperatorModes.normal,4.0 ));
+    }
+
+    @Test
+    public void Testing_divide() {
+        Calculator c = new Calculator();
+        c.calculateBi(Calculator.BiOperatorModes.divide, 24.0);
+        Assert.assertEquals((Double) 8.0, c.calculateBi(Calculator.BiOperatorModes.normal,3.0));
+    }
+    @Test
+
+    public void Testing_power() {
+        Calculator c = new Calculator();
+        c.calculateBi(Calculator.BiOperatorModes.xpowerofy, 5.0);
+        Assert.assertEquals((Double) 125.0, c.calculateBi(Calculator.BiOperatorModes.normal,3.0));
+    }
 }
 
