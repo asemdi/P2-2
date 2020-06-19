@@ -6,6 +6,9 @@
  * @license     Apache (http://www.apache.org/licenses/LICENSE-2.0)
  */
 
+/**
+ * Info about this package doing something for package-info.java file.
+ * */
 package simplejavacalculator;
 
 import static java.lang.Double.NaN;
@@ -20,11 +23,16 @@ public class Calculator {
     public enum BiOperatorModes {
         /**Checks if number is NORMAL.*/
         NORMAL,
-        /**ADDs two numbers.*/ADD,
-        /**Subtracts one number from another.*/MINUS,
-        /**Multiplies two numbers.*/MULTIPLY,
-        /**Divides one number by another.*/DIVIDE,
-        /**Calculates one number to the power of another.*/XPOWEROFY
+        /**ADDs two numbers.*/
+        ADD,
+        /**Subtracts one number from another.*/
+        MINUS,
+        /**Multiplies two numbers.*/
+        MULTIPLY,
+        /**Divides one number by another.*/
+        DIVIDE,
+        /**Calculates one number to the power of another.*/
+        XPOWEROFY
     }
     public enum MonoOperatorModes {
         /**Calculates a number to the power of 2.*/
@@ -75,7 +83,7 @@ public class Calculator {
             return num1 / num2;
         }
         if (mode == BiOperatorModes.XPOWEROFY) {
-            return pow(num1,num2);
+            return pow(num1, num2);
         }
 
         // never reach
