@@ -74,6 +74,12 @@ public class CalculatorTest {
         Double result = c.calculateMono(Calculator.MonoOperatorModes.ABS, -1.0);
         Assert.assertEquals((Double) 1.0, result);
     }
+    @Test
+    public void Testing_ABS_2() {
+        Calculator c = new Calculator();
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.ABS,  2.0);
+        Assert.assertEquals((Double) 2.0, result);
+    }
     // LOG
     @Test
     public void Testing_LOG_1() {
