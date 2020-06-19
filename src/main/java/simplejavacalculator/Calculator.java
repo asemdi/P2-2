@@ -13,11 +13,11 @@ import static java.lang.Math.log10;
 import static java.lang.Math.pow;
 
 public class Calculator {
-
+    /** Operations for two numbers */
     public enum BiOperatorModes {
         normal, add, minus, multiply, divide , xpowerofy 
     }
-
+    /** Operations for one number */
     public enum MonoOperatorModes {
         square, squareRoot, oneDevidedBy, cos, sin, tan ,log , rate, abs
     }
