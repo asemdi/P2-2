@@ -85,7 +85,9 @@ public class UI implements ActionListener {
    /**This is a calculator.*/
    private final Calculator calc;
    /**This is a list of button values.*/
-   private final String[] buttonValue = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+   private final String[] buttonValue = {"0", "1", "2",
+           "3", "4", "5", "6",
+           "7", "8", "9"};
    /**This is a font.*/
    private final Font font;
    /**This is a font of text.*/
@@ -183,25 +185,25 @@ public class UI implements ActionListener {
 
       final int panelSub234_size = 15;
 
-      panelSub2.add(but[1]);
-      panelSub2.add(but[2]);
-      panelSub2.add(but[3]);
+      panelSub2.add(but[Integer.parseInt(buttonValue[1])]);
+      panelSub2.add(but[Integer.parseInt(buttonValue[2])]);
+      panelSub2.add(but[Integer.parseInt(buttonValue[3])]);
       panelSub2.add(Box.createHorizontalStrut(panelSub234_size));
       panelSub2.add(butAdd);
       panelSub2.add(butMinus);
       panel.add(panelSub2);
 
-      panelSub3.add(but[4]);
-      panelSub3.add(but[5]);
-      panelSub3.add(but[6]);
+      panelSub3.add(but[Integer.parseInt(buttonValue[4])]);
+      panelSub3.add(but[Integer.parseInt(buttonValue[5])]);
+      panelSub3.add(but[Integer.parseInt(buttonValue[6])]);
       panelSub3.add(Box.createHorizontalStrut(panelSub234_size));
       panelSub3.add(butMultiply);
 
       panelSub3.add(butDivide);
       panel.add(panelSub3);
-      panelSub4.add(but[7]);
-      panelSub4.add(but[8]);
-      panelSub4.add(but[9]);
+      panelSub4.add(but[Integer.parseInt(buttonValue[7])]);
+      panelSub4.add(but[Integer.parseInt(buttonValue[8])]);
+      panelSub4.add(but[Integer.parseInt(buttonValue[9])]);
       panelSub4.add(Box.createHorizontalStrut(panelSub234_size));
       panelSub4.add(butEqual);
       panelSub4.add(butCancel);
