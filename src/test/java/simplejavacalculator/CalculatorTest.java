@@ -6,79 +6,79 @@ package simplejavacalculator;
         import static java.lang.Double.NaN;
 
 public class CalculatorTest {
-    //square, oneDevidedBy, cos, sin, tan ,log , rate, abs
+    //SQUARE, ONEDEVIDEDBY, COS, SIN, TAN ,LOG , RATE, ABS
     @Test
-    public void Testing_square_1() {
+    public void Testing_SQUARE_1() {
         Calculator c = new Calculator();
-        Double result = c.calculateMono(Calculator.MonoOperatorModes.square, 5.0);
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.SQUARE, 5.0);
         Assert.assertEquals((Double) 25.0, result);
     }
-    // squareRoot
+    // SQUAREROOT
     @Test
-    public void Testing_squareRoot_1() {
+    public void Testing_SQUAREROOT_1() {
         Calculator c = new Calculator();
-        Double result = c.calculateMono(Calculator.MonoOperatorModes.squareRoot, 49.0);
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.SQUAREROOT, 49.0);
         Assert.assertEquals((Double) 7.0, result);
     }
-    //oneDevidedBy
+    //ONEDEVIDEDBY
     @Test
-    public void Testing_oneDevidedBy_1() {
+    public void Testing_ONEDEVIDEDBY_1() {
         Calculator c = new Calculator();
-        Double result = c.calculateMono(Calculator.MonoOperatorModes.oneDevidedBy, 2.0);
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.ONEDEVIDEDBY, 2.0);
         Assert.assertEquals((Double) 0.5, result);
     }
-    // cos
+    // COS
     @Test
-    public void Testing_cos_1() {
+    public void Testing_COS_1() {
         Calculator c = new Calculator();
-        Double result = c.calculateMono(Calculator.MonoOperatorModes.cos, 0.0);
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.COS, 0.0);
         Assert.assertEquals((Double) 1.0, result);
     }
-    // sin
+    // SIN
     @Test
-    public void Testing_sin_1() {
+    public void Testing_SIN_1() {
         Calculator c = new Calculator();
-        Double result = c.calculateMono(Calculator.MonoOperatorModes.sin, 0.0);
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.SIN, 0.0);
         Assert.assertEquals((Double) 0.0, result);
     }
-    // tan
+    // TAN
     @Test
-    public void Testing_tan_1() {
+    public void Testing_TAN_1() {
         Calculator c = new Calculator();
-        Double result = c.calculateMono(Calculator.MonoOperatorModes.tan, 0.0);
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.TAN, 0.0);
         Assert.assertEquals((Double) 0.0, result);
     }
     @Test
-    public void Testing_tan_2() {
+    public void Testing_TAN_2() {
         Calculator c = new Calculator();
-        Double result = c.calculateMono(Calculator.MonoOperatorModes.tan, 90.0);
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.TAN, 90.0);
         Assert.assertEquals((Double) NaN, result);
     }
     @Test
-    public void Testing_tan_3() {
+    public void Testing_TAN_3() {
         Calculator c = new Calculator();
-        Double result = c.calculateMono(Calculator.MonoOperatorModes.tan, 1.0);
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.TAN, 1.0);
         Assert.assertEquals((Double) 1.5574077246549023, result);
     }
-    // rate
+    // RATE
     @Test
-    public void Testing_rate_1() {
+    public void Testing_RATE_1() {
         Calculator c = new Calculator();
-        Double result = c.calculateMono(Calculator.MonoOperatorModes.rate, 50.0);
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.RATE, 50.0);
         Assert.assertEquals((Double) 0.5, result);
     }
-    // abs
+    // ABS
     @Test
-    public void Testing_abs_1() {
+    public void Testing_ABS_1() {
         Calculator c = new Calculator();
-        Double result = c.calculateMono(Calculator.MonoOperatorModes.abs, -1.0);
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.ABS, -1.0);
         Assert.assertEquals((Double) 1.0, result);
     }
-    // log
+    // LOG
     @Test
-    public void Testing_log_1() {
+    public void Testing_LOG_1() {
         Calculator c = new Calculator();
-        Double result = c.calculateMono(Calculator.MonoOperatorModes.log, 100.0);
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.LOG, 100.0);
         Assert.assertEquals((Double) 2.0, result);
     }
 
@@ -111,23 +111,23 @@ public class CalculatorTest {
     }
 
     @Test
-    public void Testing_multiply() {
+    public void Testing_MULTIPLY() {
         Calculator c = new Calculator();
-        c.calculateBi(Calculator.BiOperatorModes.multiply, 3.0);
+        c.calculateBi(Calculator.BiOperatorModes.MULTIPLY, 3.0);
         Assert.assertEquals((Double) 12.0, c.calculateBi(Calculator.BiOperatorModes.NORMAL,4.0 ));
     }
 
     @Test
-    public void Testing_divide() {
+    public void Testing_DIVIDE() {
         Calculator c = new Calculator();
-        c.calculateBi(Calculator.BiOperatorModes.divide, 24.0);
+        c.calculateBi(Calculator.BiOperatorModes.DIVIDE, 24.0);
         Assert.assertEquals((Double) 8.0, c.calculateBi(Calculator.BiOperatorModes.NORMAL,3.0));
     }
     @Test
 
     public void Testing_power() {
         Calculator c = new Calculator();
-        c.calculateBi(Calculator.BiOperatorModes.xpowerofy, 5.0);
+        c.calculateBi(Calculator.BiOperatorModes.XPOWEROFY, 5.0);
         Assert.assertEquals((Double) 125.0, c.calculateBi(Calculator.BiOperatorModes.NORMAL,3.0));
     }
 

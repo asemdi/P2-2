@@ -18,23 +18,24 @@ public class Calculator {
         /* Checks if number is NORMAL */NORMAL,
         /* ADDs two numbers */ADD,
         /* Subtracts one number from another */MINUS,
-        /* Multiplies two numbers */multiply,
-        /* Divides one number by another*/divide,
-        /* Calculates one number to the power of another */xpowerofy
+        /* Multiplies two numbers */MULTIPLY,
+        /* DIVIDEs one number by another*/DIVIDE,
+        /* Calculates one number to the power of another */XPOWEROFY
     }
     public enum MonoOperatorModes {
-        /* Calculates a number to the power of 2*/square,
-        /* Calculates square root of a number */squareRoot,
-        /* Calculates inverse of a number */oneDevidedBy,
-        /* Calculate cos of a number */cos,
-        /* Calculates sin of a number */sin,
-        /* Calculates tan of a number*/tan,
-        /* Calculates log10 of a number */log,
-        /*  */rate,
-        /* Calculates absolute value of a number */abs
+        /* Calculates a number to the power of 2*/SQUARE,
+        /* Calculates SQUARE root of a number */SQUAREROOT,
+        /* Calculates inverse of a number */ONEDEVIDEDBY,
+        /* Calculate COS of a number */COS,
+        /* Calculates SIN of a number */SIN,
+        /* Calculates TAN of a number*/TAN,
+        /* Calculates LOG10 of a number */LOG,
+        /*  */RATE,
+        /* Calculates ABSolute value of a number */ABS
     }
 
-    private Double num1, /* Second number to perform calculations on */ num2;
+    private Double num1;
+    private Double num2; /* Second number to perform calculations on */
     private  /* Specifies what calculation to perform */BiOperatorModes mode = BiOperatorModes.NORMAL;
 
     private Double calculateBiImpl() {
@@ -51,13 +52,13 @@ public class Calculator {
         if (mode == BiOperatorModes.MINUS) {
             return num1 - num2;
         }
-        if (mode == BiOperatorModes.multiply) {
+        if (mode == BiOperatorModes.MULTIPLY) {
             return num1 * num2;
         }
-        if (mode == BiOperatorModes.divide) {
+        if (mode == BiOperatorModes.DIVIDE) {
             return num1 / num2;
         }
-        if (mode == BiOperatorModes.xpowerofy) {
+        if (mode == BiOperatorModes.XPOWEROFY) {
             return pow(num1,num2);
         }
 
@@ -92,22 +93,22 @@ public class Calculator {
     }
 
     public Double calculateMono(MonoOperatorModes newMode, Double num) {
-        if (newMode == MonoOperatorModes.square) {
+        if (newMode == MonoOperatorModes.SQUARE) {
             return num * num;
         }
-        if (newMode == MonoOperatorModes.squareRoot) {
+        if (newMode == MonoOperatorModes.SQUAREROOT) {
             return Math.sqrt(num);
         }
-        if (newMode == MonoOperatorModes.oneDevidedBy) {
+        if (newMode == MonoOperatorModes.ONEDEVIDEDBY) {
             return 1 / num;
         }
-        if (newMode == MonoOperatorModes.cos) {
+        if (newMode == MonoOperatorModes.COS) {
             return Math.cos(num);
         }
-        if (newMode == MonoOperatorModes.sin) {
+        if (newMode == MonoOperatorModes.SIN) {
             return Math.sin(num);
         }
-        if (newMode == MonoOperatorModes.tan) {
+        if (newMode == MonoOperatorModes.TAN) {
             if (num == 0 || num % 180 == 0) {
                 return 0.0;
             }
@@ -117,13 +118,13 @@ public class Calculator {
 
             return Math.tan(num);
         }
-        if (newMode == MonoOperatorModes.log) {
+        if (newMode == MonoOperatorModes.LOG) {
             return log10(num);
         }
-        if (newMode == MonoOperatorModes.rate) {
+        if (newMode == MonoOperatorModes.RATE) {
            return num / 100;
         }
-        if (newMode == MonoOperatorModes.abs){
+        if (newMode == MonoOperatorModes.ABS){
             return Math.abs(num);
         }
 
