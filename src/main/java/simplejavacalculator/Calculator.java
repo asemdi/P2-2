@@ -35,32 +35,20 @@ public class Calculator {
         XPOWEROFY
     }
     public enum MonoOperatorModes {
-        /**Calculates a number to the power of 2.*/
-        SQUARE,
-        /**Calculates SQUARE root of a number.*/
-        SQUAREROOT,
-        /** Calculates inverse of a number.*/
-        ONEDEVIDEDBY,
-        /**Calculate COS of a number.*/
-        COS,
-        /**Calculates SIN of a number.*/
-        SIN,
-        /**Calculates TAN of a number.*/
-        TAN,
-        /**Calculates LOG10 of a number.*/
-        LOG,
-        /**Calculates rate.*/
-        RATE,
-        /**Calculates ABSolute value of a number.*/
-        ABS
+        /* Calculates a number to the power of 2*/SQUARE,
+        /* Calculates SQUARE root of a number */SQUAREROOT,
+        /* Calculates inverse of a number */ONEDEVIDEDBY,
+        /* Calculate COS of a number */COS,
+        /* Calculates SIN of a number */SIN,
+        /* Calculates TAN of a number*/TAN,
+        /* Calculates LOG10 of a number */LOG,
+        /*  */RATE,
+        /* Calculates ABSolute value of a number */ABS
     }
 
-    /**First number to perform calculations on.*/
     private Double num1;
-    /**Second number to perform calculations on.*/
-    private Double num2;
-    /**Operation to perform, default normal.*/
-    private BiOperatorModes mode = BiOperatorModes.NORMAL;
+    private Double num2; /* Second number to perform calculations on */
+    private  /* Specifies what calculation to perform */BiOperatorModes mode = BiOperatorModes.NORMAL;
 
     private Double calculateBiImpl() {
         if (mode == BiOperatorModes.NORMAL) {
@@ -149,7 +137,7 @@ public class Calculator {
         if (newMode == MonoOperatorModes.RATE) {
            return num / 100;
         }
-        if (newMode == MonoOperatorModes.ABS) {
+        if (newMode == MonoOperatorModes.ABS){
             return Math.abs(num);
         }
 

@@ -96,6 +96,13 @@ public class CalculatorTest {
     }
 
     @Test
+    public void Testing_NORMAL_2() {
+        Calculator c = new Calculator();
+        c.calculateBi(Calculator.BiOperatorModes.NORMAL, 2.0);
+        Assert.assertEquals((Double) NaN, c.calculateBi(Calculator.BiOperatorModes.ADD, 3.0));
+    }
+
+    @Test
     public void Testing_ADD_1() {
         Calculator c = new Calculator();
         c.calculateBi(Calculator.BiOperatorModes.ADD, 123.0);
