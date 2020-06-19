@@ -147,9 +147,7 @@ public class Calculator {
         if (newMode == MonoOperatorModes.LOG) {
             return log10(num);
         }
-        /**
-         * Percentage.
-         */
+        /**Percentage.*/
         final int perc = 100;
         if (newMode == MonoOperatorModes.RATE) {
            return num / perc;
