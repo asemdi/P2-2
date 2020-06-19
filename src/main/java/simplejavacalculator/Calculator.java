@@ -16,8 +16,8 @@ public class Calculator {
 
     public enum BiOperatorModes {
         /* Checks if number is NORMAL */NORMAL,
-        /* Adds two numbers */add,
-        /* Subtracts one number from another */minus,
+        /* ADDs two numbers */ADD,
+        /* Subtracts one number from another */MINUS,
         /* Multiplies two numbers */multiply,
         /* Divides one number by another*/divide,
         /* Calculates one number to the power of another */xpowerofy
@@ -41,14 +41,14 @@ public class Calculator {
         if (mode == BiOperatorModes.NORMAL) {
             return num2;
         }
-        if (mode == BiOperatorModes.add) {
+        if (mode == BiOperatorModes.ADD) {
             if (num2 != 0) {
                 return num1 + num2;
             }
 
             return num1;
         }
-        if (mode == BiOperatorModes.minus) {
+        if (mode == BiOperatorModes.MINUS) {
             return num1 - num2;
         }
         if (mode == BiOperatorModes.multiply) {

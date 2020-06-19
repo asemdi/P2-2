@@ -71,22 +71,22 @@ public class UI implements ActionListener {
       for (int i = 0; i < JButton_size; i++) {
          but[i] = new JButton(String.valueOf(i)); }
 
-      butAdd = new JButton("+");      
-      butMinus = new JButton("-");      
-      butMultiply = new JButton("*");      
-      butDivide = new JButton("/");      
-      butEqual = new JButton("=");      
-      butSquareRoot = new JButton("sqrt");      
-      butSquare = new JButton("x*x");      
-      butOneDevidedBy = new JButton("1/x");      
-      butCos = new JButton("Cos");      
-      butSin = new JButton("Sin");      
-      butTan = new JButton("Tan");      
-      butxpowerofy = new JButton("x^y");      
-      butlog = new JButton("log10(x)");      
-      butrate = new JButton("x%");      
-      butabs = new JButton("abs(x)");      
-      butCancel = new JButton("C");      
+      butAdd = new JButton("+");
+      butMinus = new JButton("-");
+      butMultiply = new JButton("*");
+      butDivide = new JButton("/");
+      butEqual = new JButton("=");
+      butSquareRoot = new JButton("sqrt");
+      butSquare = new JButton("x*x");
+      butOneDevidedBy = new JButton("1/x");
+      butCos = new JButton("Cos");
+      butSin = new JButton("Sin");
+      butTan = new JButton("Tan");
+      butxpowerofy = new JButton("x^y");
+      butlog = new JButton("log10(x)");
+      butrate = new JButton("x%");
+      butabs = new JButton("abs(x)");
+      butCancel = new JButton("C");
       butBinary = new JButton("Bin");
       calc = new Calculator();
    }
@@ -104,7 +104,7 @@ public class UI implements ActionListener {
 
       for (int i = 0; i < JButton_size; i++) {
          but[i].setFont(font);
-      }      
+      }
       butAdd.setFont(font);
       butMinus.setFont(font);
       butMultiply.setFont(font);
@@ -203,10 +203,10 @@ public class UI implements ActionListener {
          }
       }
       if (source == butAdd) {
-         writer(calc.calculateBi(Calculator.BiOperatorModes.add, reader()));
+         writer(calc.calculateBi(Calculator.BiOperatorModes.ADD, reader()));
       }
       if (source == butMinus) {
-         writer(calc.calculateBi(Calculator.BiOperatorModes.minus, reader()));
+         writer(calc.calculateBi(Calculator.BiOperatorModes.MINUS, reader()));
       }
       if (source == butMultiply) {
          writer(calc.calculateBi(Calculator.BiOperatorModes.multiply,

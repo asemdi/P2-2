@@ -90,23 +90,23 @@ public class CalculatorTest {
     }
 
     @Test
-    public void Testing_add_1() {
+    public void Testing_ADD_1() {
         Calculator c = new Calculator();
-        c.calculateBi(Calculator.BiOperatorModes.add, 123.0);
+        c.calculateBi(Calculator.BiOperatorModes.ADD, 123.0);
         Assert.assertEquals((Double) 579.0, c.calculateBi(Calculator.BiOperatorModes.NORMAL, 456.0));
     }
 
     @Test
-    public void Testing_add_2() {
+    public void Testing_ADD_2() {
         Calculator c = new Calculator();
-        c.calculateBi(Calculator.BiOperatorModes.add, 123.0);
+        c.calculateBi(Calculator.BiOperatorModes.ADD, 123.0);
         Assert.assertEquals((Double) 123.0, c.calculateBi(Calculator.BiOperatorModes.NORMAL, 0.0));
     }
 
     @Test
-    public void Testing_minus() {
+    public void Testing_MINUS() {
         Calculator c = new Calculator();
-        c.calculateBi(Calculator.BiOperatorModes.minus, 101.0);
+        c.calculateBi(Calculator.BiOperatorModes.MINUS, 101.0);
         Assert.assertEquals((Double) 49.5, c.calculateBi(Calculator.BiOperatorModes.NORMAL, 51.5));
     }
 
@@ -134,15 +134,15 @@ public class CalculatorTest {
     @Test
     public void Testing_equal() {
         Calculator c = new Calculator();
-        c.calculateBi(Calculator.BiOperatorModes.add, 6.4);
-        c.calculateBi(Calculator.BiOperatorModes.add, 2.0);
+        c.calculateBi(Calculator.BiOperatorModes.ADD, 6.4);
+        c.calculateBi(Calculator.BiOperatorModes.ADD, 2.0);
         Assert.assertEquals((Double) 11.4, c.calculateEqual(3.0));
     }
     @Test
     public void Testing_reset() {
         Calculator c = new Calculator();
-        c.calculateBi(Calculator.BiOperatorModes.add, 6.4);
-        Assert.assertEquals((Double) 8.4, c.calculateBi(Calculator.BiOperatorModes.add, 2.0));
+        c.calculateBi(Calculator.BiOperatorModes.ADD, 6.4);
+        Assert.assertEquals((Double) 8.4, c.calculateBi(Calculator.BiOperatorModes.ADD, 2.0));
         Assert.assertEquals((Double) NaN, c.reset());
     }
 }
