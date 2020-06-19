@@ -1,4 +1,5 @@
-/*
+/**
+ * Something.
  * @name        Simple Java Calculator
  * @file        Calculator.java
  * @author      SORIA Pierre-Henry
@@ -59,7 +60,7 @@ public class Calculator {
     private Double num1;
     /**Second number to perform calculations on.*/
     private Double num2;
-    /**Normal*/
+    /**Normal.*/
     private BiOperatorModes mode = BiOperatorModes.NORMAL;
 
     private Double calculateBiImpl() {
@@ -149,7 +150,7 @@ public class Calculator {
         if (newMode == MonoOperatorModes.RATE) {
            return num / 100;
         }
-        if (newMode == MonoOperatorModes.ABS){
+        if (newMode == MonoOperatorModes.ABS) {
             return Math.abs(num);
         }
 
