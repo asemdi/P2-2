@@ -28,6 +28,13 @@ public class CalculatorTest {
     }
 
     @Test
+    public void Testing_normal() {
+        Calculator c = new Calculator();
+        c.calculateBi(Calculator.BiOperatorModes.normal, 2.0);
+        Assert.assertEquals((Double) NaN, c.calculateBi(Calculator.BiOperatorModes.normal, 3.0));
+    }
+
+    @Test
     public void Testing_add() {
         Calculator c = new Calculator();
         c.calculateBi(Calculator.BiOperatorModes.add, 123.0);
@@ -60,6 +67,14 @@ public class CalculatorTest {
         Calculator c = new Calculator();
         c.calculateBi(Calculator.BiOperatorModes.xpowerofy, 5.0);
         Assert.assertEquals((Double) 125.0, c.calculateBi(Calculator.BiOperatorModes.normal,3.0));
+    }
+
+    @Test
+    public void calculateEqualTest() {
+        Calculator c = new Calculator();
+        c.calculateBi(Calculator.BiOperatorModes.add, 6.4);
+        c.calculateBi(Calculator.BiOperatorModes.add, 2.0);
+        Assert.assertEquals((Double) 11.4, c.calculateEqual(3.0));
     }
 }
 
