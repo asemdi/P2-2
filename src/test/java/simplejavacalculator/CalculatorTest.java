@@ -7,13 +7,13 @@ package simplejavacalculator;
 
 public class CalculatorTest {
     @Test
-    public void Testing0() {
+    public void Testing_square_1() {
         Calculator c = new Calculator();
         Double result = c.calculateMono(Calculator.MonoOperatorModes.square, 5.0);
         Assert.assertEquals((Double) 25.0, result);
     }
     @Test
-    public void Testing1() {
+    public void Testing_log_1() {
         Calculator c = new Calculator();
         Double result = c.calculateMono(Calculator.MonoOperatorModes.log, 100.0);
         Assert.assertEquals((Double) 2.0, result);
