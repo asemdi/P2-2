@@ -28,8 +28,8 @@ public class Calculator {
         /* Calculates inverse of a number */oneDevidedBy,
         /* Calculate cos of a number */cos,
         /* Calculates sin of a number */sin,
-        /* Calculates tan of a number*/tan ,
-        /* Calculates log10 of a number */log ,
+        /* Calculates tan of a number*/tan,
+        /* Calculates log10 of a number */log,
         /*  */rate,
         /* Calculates absolute value of a number */abs
     }
