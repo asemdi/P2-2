@@ -45,7 +45,6 @@ public class UI implements ActionListener {
    
    private final String[] buttonValue = {"0", "1", "2", "3", "4", "5", "6",
       "7", "8", "9"};
-   
    private final Font font;
    private final Font textFont;
    final int font_size = 18;
@@ -53,7 +52,6 @@ public class UI implements ActionListener {
    final int JButton_size = 10;
    final int frame_size = 450;
 
-   
    public UI() throws IOException {
       frame = new JFrame("Calculator PH");
 
@@ -70,15 +68,13 @@ public class UI implements ActionListener {
       panelSub8 = new JPanel(new FlowLayout());
 
       font = new Font("Consolas", Font.PLAIN, font_size);
-      
       text = new JTextArea(1, 30);
 
       textFont = new Font("Consolas", Font.BOLD, textFont_size);
 
       but = new JButton[JButton_size];
       for (int i = 0; i < JButton_size; i++) {
-         but[i] = new JButton(String.valueOf(i));
-      }      
+         but[i] = new JButton(String.valueOf(i)); }
       butAdd = new JButton("+");      
       butMinus = new JButton("-");      
       butMultiply = new JButton("*");      
@@ -148,7 +144,7 @@ public class UI implements ActionListener {
       panelSub2.add(butAdd);
       panelSub2.add(butMinus);
       panel.add(panelSub2);
-      
+
       panelSub3.add(but[4]);
       panelSub3.add(but[5]);
       panelSub3.add(but[6]);
@@ -156,7 +152,6 @@ public class UI implements ActionListener {
       panelSub3.add(butMultiply);
       panelSub3.add(butDivide);      
       panel.add(panelSub3);
-      
       panelSub4.add(but[7]);
       panelSub4.add(but[8]);
       panelSub4.add(but[9]);
@@ -169,7 +164,6 @@ public class UI implements ActionListener {
       panelSub5.add(but[0]);
       panelSub5.add(Box.createHorizontalStrut(panelSub5_size));
       panel.add(panelSub5);
-      
       panelSub6.add(butSquare);
       panelSub6.add(butSquareRoot);
       panelSub6.add(butOneDevidedBy);
@@ -186,10 +180,8 @@ public class UI implements ActionListener {
       panelSub8.add(butabs);
       panelSub8.add(butBinary);
       panel.add(panelSub8);
-      
       for (int i = 0; i < JButton_size; i++) {
-         but[i].addActionListener(this);
-      }      
+         but[i].addActionListener(this); }
       butAdd.addActionListener(this);
       butMinus.addActionListener(this);
       butMultiply.addActionListener(this);
@@ -211,11 +203,9 @@ public class UI implements ActionListener {
       
       frame.add(panel);
    }
-   
    @Override
    public void actionPerformed(ActionEvent e) {
       final Object source = e.getSource();
-      
       for (int i = 0; i < JButton_size; i++) {
          if (source == but[i]) {
             text.replaceSelection(buttonValue[i]);
