@@ -42,7 +42,6 @@ public class UI implements ActionListener {
       butEqual, butCancel, butSquareRoot, butSquare, butOneDevidedBy,
       butCos, butSin, butTan, butxpowerofy, butlog, butrate, butabs, butBinary;
    private final Calculator calc;
-   
    private final String[] buttonValue = {"0", "1", "2", "3", "4", "5", "6",
       "7", "8", "9"};
    private final Font font;
@@ -150,7 +149,9 @@ public class UI implements ActionListener {
       panelSub3.add(but[6]);
       panelSub3.add(Box.createHorizontalStrut(panelSub234_size));
       panelSub3.add(butMultiply);
-      panelSub3.add(butDivide);      
+
+      panelSub3.add(butDivide);
+      
       panel.add(panelSub3);
       panelSub4.add(but[7]);
       panelSub4.add(but[8]);
@@ -200,7 +201,6 @@ public class UI implements ActionListener {
       
       butEqual.addActionListener(this);
       butCancel.addActionListener(this);
-      
       frame.add(panel);
    }
    @Override
