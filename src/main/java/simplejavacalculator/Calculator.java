@@ -13,20 +13,18 @@ import static java.lang.Math.log10;
 import static java.lang.Math.pow;
 
 /**
- *  Calculator Operation that can be used
+ * Calculator Operation that can be used.
  */
 public class Calculator {
 
     public enum BiOperatorModes {
-        /**
-         * Checks if number is NORMAL
-         */
+        /**Checks if number is NORMAL.*/
         NORMAL,
-        /* ADDs two numbers */ADD,
-        /* Subtracts one number from another */MINUS,
-        /* Multiplies two numbers */MULTIPLY,
-        /* DIVIDEs one number by another*/DIVIDE,
-        /* Calculates one number to the power of another */XPOWEROFY
+        /**ADDs two numbers.*/ADD,
+        /**Subtracts one number from another.*/MINUS,
+        /**Multiplies two numbers.*/MULTIPLY,
+        /**Divides one number by another.*/DIVIDE,
+        /**Calculates one number to the power of another.*/XPOWEROFY
     }
     public enum MonoOperatorModes {
         /* Calculates a number to the power of 2*/SQUARE,
