@@ -51,7 +51,7 @@ public class UI implements ActionListener {
    final int font_size = 18;
    final int textFont_size = 24;
    final int JButton_size = 10;
-   final int frame_size= 450;
+   final int frame_size = 450;
 
    
    public UI() throws IOException {
@@ -140,6 +140,7 @@ public class UI implements ActionListener {
       panel.add(panelSub1);
 
       final int panelSub234_size = 15;
+
       panelSub2.add(but[1]);
       panelSub2.add(but[2]);
       panelSub2.add(but[3]);
