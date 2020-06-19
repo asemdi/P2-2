@@ -9,13 +9,12 @@
 package simplejavacalculator;
 
 public class SimpleJavaCalculator {
-   protected SimpleJavaCalculator(){
+   protected SimpleJavaCalculator() {
       throw new UnsupportedOperationException();
    }
    /**
     * Start the calculator.
     * @param args just arguments jesus why do i need to specify this
-    * @return     null
     */
    public static void main(final String[] args) {
       try {
