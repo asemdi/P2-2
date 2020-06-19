@@ -63,7 +63,8 @@ public class Calculator {
         }
 
         // never reach
-        throw new Error();
+        throw new RuntimeException("Should not reach");
+
     }
 
     public Double calculateBi(BiOperatorModes newMode, Double num) {
@@ -129,7 +130,8 @@ public class Calculator {
         }
 
         // never reach
-        throw new Error();
+        throw new RuntimeException("Should not reach");
+        //throw new Error();
     }
 
 }
