@@ -8,7 +8,7 @@
 
 /**
  * Info about this package doing something for package-info.java file.
- * */
+ */
 package simplejavacalculator;
 
 import static java.lang.Double.NaN;
@@ -35,15 +35,24 @@ public class Calculator {
         XPOWEROFY
     }
     public enum MonoOperatorModes {
-        /* Calculates a number to the power of 2*/SQUARE,
-        /* Calculates SQUARE root of a number */SQUAREROOT,
-        /* Calculates inverse of a number */ONEDEVIDEDBY,
-        /* Calculate COS of a number */COS,
-        /* Calculates SIN of a number */SIN,
-        /* Calculates TAN of a number*/TAN,
-        /* Calculates LOG10 of a number */LOG,
-        /*  */RATE,
-        /* Calculates ABSolute value of a number */ABS
+        /**Calculates a number to the power of 2.*/
+        SQUARE,
+        /**Calculates SQUARE root of a number.*/
+        SQUAREROOT,
+        /**Calculates inverse of a number.*/
+        ONEDEVIDEDBY,
+        /**Calculate COS of a number.*/
+        COS,
+        /**Calculates SIN of a number.*/
+        SIN,
+        /**Calculates TAN of a number.*/
+        TAN,
+        /**Calculates LOG10 of a number.*/
+        LOG,
+        /**Calculate rate.*/
+        RATE,
+        /**Calculates ABSolute value of a number.*/
+        ABS
     }
 
     private Double num1;
