@@ -24,43 +24,82 @@ import javax.swing.BoxLayout;
 import java.io.*;
 
 public class UI implements ActionListener {
+   /**This is a frame.*/
    private final JFrame frame;
+   /**This is a panel.*/
    private final JPanel panel;
+   /**This is a sub-panel #1.*/
    private final JPanel panelSub1;
+   /**This is a sub-panel #2.*/
    private final JPanel panelSub2;
+   /**This is a sub-panel #3.*/
    private final JPanel panelSub3;
+   /**This is a sub-panel #4.*/
    private final JPanel panelSub4;
+   /**This is a sub-panel #5.*/
    private final JPanel panelSub5;
+   /**This is a sub-panel #6.*/
    private final JPanel panelSub6;
+   /**This is a sub-panel #7.*/
    private final JPanel panelSub7;
+   /**This is a sub-panel #8.*/
    private final JPanel panelSub8;
+   /**This is text area.*/
    private final JTextArea text;
+   /**This is a list of buttons.*/
    private final JButton[] but;
+   /**This is an add button.*/
    private final JButton butAdd;
+   /**This is a minus button.*/
    private final JButton butMinus;
+   /**This is a multiply button.*/
    private final JButton butMultiply;
+   /**This is a divide button.*/
    private final JButton butDivide;
+   /**This is an equal button.*/
    private final JButton butEqual;
+   /**This is a cancel button.*/
    private final JButton butCancel;
+   /**This is a square root button.*/
    private final JButton butSquareRoot;
+   /**This is a square button.*/
    private final JButton butSquare;
+   /**This is an inverse button.*/
    private final JButton butOneDevidedBy;
+   /**This is a cosine button.*/
    private final JButton butCos;
+   /**This is a sine button.*/
    private final JButton butSin;
+   /**This is a tan button.*/
    private final JButton butTan;
+   /**This is a to the power of button.*/
    private final JButton butxpowerofy;
+   /**This is a log button.*/
    private final JButton butlog;
+   /**This is a rate button.*/
    private final JButton butrate;
+   /**This is an absolute value button.*/
    private final JButton butabs;
+   /**This is a binary button.*/
    private final JButton butBinary;
+   /**This is a calculator.*/
    private final Calculator calc;
+   /**This is a list of button values.*/
    private final String[] buttonValue = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+   /**This is a font.*/
    private final Font font;
+   /**This is a font of text.*/
    private final Font textFont;
+   /**This is a size of font.*/
    final int font_size = 18;
+   /**This is a size of font of text.*/
    final int textFont_size = 24;
+   /**This is a size of a button.*/
    final int JButton_size = 10;
+   /**This is a frame size.*/
    final int frame_size = 450;
+   /**This is a border of text area.*/
+   final int border_text = 30;
 
    public UI() throws IOException {
       frame = new JFrame("Calculator PH");
@@ -77,7 +116,7 @@ public class UI implements ActionListener {
       panelSub8 = new JPanel(new FlowLayout());
 
       font = new Font("Consolas", Font.PLAIN, font_size);
-      text = new JTextArea(1, 30);
+      text = new JTextArea(1, border_text);
 
       textFont = new Font("Consolas", Font.BOLD, textFont_size);
 
