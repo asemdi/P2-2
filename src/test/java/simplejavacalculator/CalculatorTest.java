@@ -17,7 +17,7 @@ public class CalculatorTest {
     @Test
     public void Testing_squareRoot_1() {
         Calculator c = new Calculator();
-        Double result = c.calculateMono(Calculator.MonoOperatorModes.square, 49.0);
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.squareRoot, 49.0);
         Assert.assertEquals((Double) 7.0, result);
     }
     @Test
