@@ -103,6 +103,7 @@ public class UI implements ActionListener {
    /**This is a border of text area.*/
    final int border_text = 30;
 
+
    public UI() throws IOException {
       frame = new JFrame("Calculator PH");
 
