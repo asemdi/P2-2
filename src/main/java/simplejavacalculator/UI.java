@@ -24,9 +24,7 @@ import javax.swing.BoxLayout;
 import java.io.*;
 
 public class UI implements ActionListener {
-   
    private final JFrame frame;
-   
    private final JPanel panel;
    private final JPanel panelSub1;
    private final JPanel panelSub2;
@@ -36,7 +34,6 @@ public class UI implements ActionListener {
    private final JPanel panelSub6;
    private final JPanel panelSub7;
    private final JPanel panelSub8;
-   
    private final JTextArea text;
    private final JButton but[], butAdd, butMinus, butMultiply, butDivide,
       butEqual, butCancel, butSquareRoot, butSquare, butOneDevidedBy,
@@ -54,7 +51,6 @@ public class UI implements ActionListener {
    public UI() throws IOException {
       frame = new JFrame("Calculator PH");
 
-      
       panel = new JPanel();
       panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
       panelSub1 = new JPanel(new FlowLayout());
@@ -74,6 +70,7 @@ public class UI implements ActionListener {
       but = new JButton[JButton_size];
       for (int i = 0; i < JButton_size; i++) {
          but[i] = new JButton(String.valueOf(i)); }
+      
       butAdd = new JButton("+");      
       butMinus = new JButton("-");      
       butMultiply = new JButton("*");      
@@ -151,7 +148,6 @@ public class UI implements ActionListener {
       panelSub3.add(butMultiply);
 
       panelSub3.add(butDivide);
-      
       panel.add(panelSub3);
       panelSub4.add(but[7]);
       panelSub4.add(but[8]);
