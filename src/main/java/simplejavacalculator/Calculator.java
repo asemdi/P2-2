@@ -1,4 +1,4 @@
-/**
+/*
  * @name        Simple Java Calculator
  * @file        Calculator.java
  * @author      SORIA Pierre-Henry
@@ -15,27 +15,27 @@ import static java.lang.Math.pow;
 public class Calculator {
 
     public enum BiOperatorModes {
-        /** Checks if number is normal */normal,
-        /** Adds two numbers */add,
-        /** Subtracts one number from another */minus,
-        /** Multiplies two numbers */multiply,
-        /** Divides one number by another*/divide,
-        /** Calculates one number to the power of another */xpowerofy
+        /* Checks if number is normal */normal,
+        /* Adds two numbers */add,
+        /* Subtracts one number from another */minus,
+        /* Multiplies two numbers */multiply,
+        /* Divides one number by another*/divide,
+        /* Calculates one number to the power of another */xpowerofy
     }
     public enum MonoOperatorModes {
-        /** Calculates a number to the power of 2*/square,
-        /** Calculates square root of a number */squareRoot,
-        /** Calculates inverse of a number */oneDevidedBy,
-        /** Calculate cos of a number */cos,
-        /** Calculates sin of a number */sin,
-        /** Calculates tan of a number*/tan ,
-        /** Calculates log10 of a number */log ,
-        /**  */rate,
-        /** Calculates absolute value of a number */abs
+        /* Calculates a number to the power of 2*/square,
+        /* Calculates square root of a number */squareRoot,
+        /* Calculates inverse of a number */oneDevidedBy,
+        /* Calculate cos of a number */cos,
+        /* Calculates sin of a number */sin,
+        /* Calculates tan of a number*/tan ,
+        /* Calculates log10 of a number */log ,
+        /*  */rate,
+        /* Calculates absolute value of a number */abs
     }
 
-    private Double /** First number to perform calculations on */num1, /** Second number to perform calculations on */ num2;
-    private  /** Specifies what calculation to perform */BiOperatorModes mode = BiOperatorModes.normal;
+    private Double num1, /* Second number to perform calculations on */ num2;
+    private  /* Specifies what calculation to perform */BiOperatorModes mode = BiOperatorModes.normal;
 
     private Double calculateBiImpl() {
         if (mode == BiOperatorModes.normal) {
