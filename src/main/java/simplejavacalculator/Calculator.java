@@ -12,10 +12,16 @@ import static java.lang.Double.NaN;
 import static java.lang.Math.log10;
 import static java.lang.Math.pow;
 
+/**
+ *  Calculator Operation that can be used
+ */
 public class Calculator {
 
     public enum BiOperatorModes {
-        /* Checks if number is NORMAL */NORMAL,
+        /**
+         * Checks if number is NORMAL
+         */
+        NORMAL,
         /* ADDs two numbers */ADD,
         /* Subtracts one number from another */MINUS,
         /* Multiplies two numbers */MULTIPLY,
