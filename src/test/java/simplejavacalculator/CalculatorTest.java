@@ -13,6 +13,18 @@ public class CalculatorTest {
         Double result = c.calculateMono(Calculator.MonoOperatorModes.SQUARE, 5.0);
         Assert.assertEquals((Double) 25.0, result);
     }
+    @Test
+    public void Testing_SQUARE_2() {
+        Calculator c = new Calculator();
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.SQUARE, -5.0);
+        Assert.assertEquals((Double) 25.0, result);
+    }
+    @Test
+    public void Testing_SQUARE_3() {
+        Calculator c = new Calculator();
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.SQUARE, 0.0);
+        Assert.assertEquals((Double) 0.0, result);
+    }
     // SQUAREROOT
     @Test
     public void Testing_SQUAREROOT_1() {
