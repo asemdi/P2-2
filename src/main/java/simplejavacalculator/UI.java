@@ -93,15 +93,15 @@ public class UI implements ActionListener {
    /**This is a font of text.*/
    private final Font textFont;
    /**This is a size of font.*/
-   private final int font_size = 18;
+   private final int fontSize = 18;
    /**This is a size of font of text.*/
-   private final int textFont_size = 24;
+   private final int textFontSize = 24;
    /**This is a size of a button.*/
-   private final int JButton_size = 10;
+   private final int jButtonSize = 10;
    /**This is a frame size.*/
-   private final int frame_size = 450;
+   private final int frameSize = 450;
    /**This is a border of text area.*/
-   private final int border_text = 30;
+   private final int borderText = 30;
 
 
    public UI() throws IOException {
@@ -118,13 +118,13 @@ public class UI implements ActionListener {
       panelSub7 = new JPanel(new FlowLayout());
       panelSub8 = new JPanel(new FlowLayout());
 
-      font = new Font("Consolas", Font.PLAIN, font_size);
-      text = new JTextArea(1, border_text);
+      font = new Font("Consolas", Font.PLAIN, fontSize);
+      text = new JTextArea(1, borderText);
 
-      textFont = new Font("Consolas", Font.BOLD, textFont_size);
+      textFont = new Font("Consolas", Font.BOLD, textFontSize);
 
-      but = new JButton[JButton_size];
-      for (int i = 0; i < JButton_size; i++) {
+      but = new JButton[jButtonSize];
+      for (int i = 0; i < jButtonSize; i++) {
          but[i] = new JButton(String.valueOf(i)); }
 
       butAdd = new JButton("+");
@@ -147,7 +147,7 @@ public class UI implements ActionListener {
       calc = new Calculator();
    }
    public void init() {
-      frame.setSize(frame_size, frame_size);
+      frame.setSize(frameSize, frameSize);
       frame.setVisible(true);
 
       frame.setLocationRelativeTo(null);
@@ -158,7 +158,7 @@ public class UI implements ActionListener {
       text.setFont(textFont);
       text.setEditable(false);
 
-      for (int i = 0; i < JButton_size; i++) {
+      for (int i = 0; i < jButtonSize; i++) {
          but[i].setFont(font);
       }
       butAdd.setFont(font);
@@ -228,7 +228,7 @@ public class UI implements ActionListener {
       panelSub8.add(butabs);
       panelSub8.add(butBinary);
       panel.add(panelSub8);
-      for (int i = 0; i < JButton_size; i++) {
+      for (int i = 0; i < jButtonSize; i++) {
          but[i].addActionListener(this); }
       butAdd.addActionListener(this);
       butMinus.addActionListener(this);
@@ -252,7 +252,7 @@ public class UI implements ActionListener {
    @Override
    public void actionPerformed(ActionEvent e) {
       final Object source = e.getSource();
-      for (int i = 0; i < JButton_size; i++) {
+      for (int i = 0; i < jButtonSize; i++) {
          if (source == but[i]) {
             text.replaceSelection(buttonValue[i]);
             return;
