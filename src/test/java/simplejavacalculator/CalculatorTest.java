@@ -25,6 +25,12 @@ public class CalculatorTest {
         Double result = c.calculateMono(Calculator.MonoOperatorModes.SQUARE, 0.0);
         Assert.assertEquals((Double) 0.0, result);
     }
+    @Test
+    public void Testing_SQUARE_4() {
+        Calculator c = new Calculator();
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.SQUARE, 1.1);
+        Assert.assertEquals((Double) 1.21, result);
+    }
     // SQUAREROOT
     @Test
     public void Testing_SQUAREROOT_1() {
@@ -37,6 +43,18 @@ public class CalculatorTest {
         Calculator c = new Calculator();
         Double result = c.calculateMono(Calculator.MonoOperatorModes.SQUAREROOT, -49.0);
         Assert.assertEquals((Double) NaN, result);
+    }
+    @Test
+    public void Testing_SQUAREROOT_3() {
+        Calculator c = new Calculator();
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.SQUAREROOT, 29.0);
+        Assert.assertEquals((Double) 5.385164807134504, result);
+    }
+    @Test
+    public void Testing_SQUAREROOT_4() {
+        Calculator c = new Calculator();
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.SQUAREROOT, 0.0);
+        Assert.assertEquals((Double) 0.0, result);
     }
     //ONEDEVIDEDBY
     @Test
