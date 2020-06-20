@@ -85,7 +85,7 @@ public class UI implements ActionListener {
    /**This is a calculator.*/
    private final Calculator calc;
    /**This is a list of button values.*/
-   private static final String[] buttonValue = {"0", "1", "2",
+   private final String[] buttonValue = {"0", "1", "2",
            "3", "4", "5", "6",
            "7", "8", "9"};
    /**This is a font.*/
@@ -93,15 +93,15 @@ public class UI implements ActionListener {
    /**This is a font of text.*/
    private final Font textFont;
    /**This is a size of font.*/
-   final int font_size = 18;
+   private final int font_size = 18;
    /**This is a size of font of text.*/
-   final int textFont_size = 24;
+   private final int textFont_size = 24;
    /**This is a size of a button.*/
-   final int JButton_size = 10;
+   private final int JButton_size = 10;
    /**This is a frame size.*/
-   final int frame_size = 450;
+   private final int frame_size = 450;
    /**This is a border of text area.*/
-   final int border_text = 30;
+   private final int border_text = 30;
 
 
    public UI() throws IOException {
