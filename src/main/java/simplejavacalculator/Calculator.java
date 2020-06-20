@@ -119,6 +119,8 @@ public class Calculator {
     }
 
     public Double calculateMono(MonoOperatorModes newMode, Double num) {
+        final int angle = 180;
+        final int right_angle = 90;
         if (newMode == MonoOperatorModes.SQUARE) {
             return num * num;
         }
@@ -135,10 +137,10 @@ public class Calculator {
             return Math.sin(num);
         }
         if (newMode == MonoOperatorModes.TAN) {
-            if (num == 0 || num % 180 == 0) {
+            if (num == 0 || num % angle == 0) {
                 return 0.0;
             }
-            if (num % 90 == 0 && num % 180 != 0) {
+            if (num % right_angle == 0 && num % angle != 0) {
                 return NaN;
             }
 
