@@ -259,8 +259,8 @@ public class UI implements ActionListener {
       butCancel.addActionListener(this);
       frame.add(panel);
    }
-   @Override
-   public void actionPerformed(ActionEvent e) {
+
+   public void actionPerformed(final ActionEvent e) {
       final Object source = e.getSource();
       for (int i = 0; i < jButtonSize; i++) {
          if (source == but[i]) {

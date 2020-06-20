@@ -118,7 +118,8 @@ public class Calculator {
         return NaN;
     }
 
-    public Double calculateMono(final MonoOperatorModes newMode, final Double num) {
+    public Double calculateMono(
+            final MonoOperatorModes newMode, final Double num) {
         final int angle = 180;
         final int rightAngle = 90;
         if (newMode == MonoOperatorModes.SQUARE) {
