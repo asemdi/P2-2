@@ -179,40 +179,50 @@ public class UI implements ActionListener {
       butCancel.setFont(font);
       butBinary.setFont(font);
 
-      final int panelSub1_size = 100;
-      panel.add(Box.createHorizontalStrut(panelSub1_size));
+      final int panelSub1Size = 100;
+      panel.add(Box.createHorizontalStrut(panelSub1Size));
       panelSub1.add(text);
       panel.add(panelSub1);
 
-      final int panelSub234_size = 15;
+      final int panelSub234Size = 15;
+      final int one = 1;
+      final int two = 2;
+      final int three = 3;
+      final int four = 4;
+      final int five = 5;
+      final int six = 6;
+      final int seven = 7;
+      final int eight = 8;
+      final int nine = 9;
 
-      panelSub2.add(but[Integer.parseInt(buttonValue[1])]);
-      panelSub2.add(but[Integer.parseInt(buttonValue[2])]);
-      panelSub2.add(but[Integer.parseInt(buttonValue[3])]);
-      panelSub2.add(Box.createHorizontalStrut(panelSub234_size));
+
+      panelSub2.add(but[one]);
+      panelSub2.add(but[two]);
+      panelSub2.add(but[three]);
+      panelSub2.add(Box.createHorizontalStrut(panelSub234Size));
       panelSub2.add(butAdd);
       panelSub2.add(butMinus);
       panel.add(panelSub2);
 
-      panelSub3.add(but[Integer.parseInt(buttonValue[4])]);
-      panelSub3.add(but[Integer.parseInt(buttonValue[5])]);
-      panelSub3.add(but[Integer.parseInt(buttonValue[6])]);
-      panelSub3.add(Box.createHorizontalStrut(panelSub234_size));
+      panelSub3.add(but[four]);
+      panelSub3.add(but[five]);
+      panelSub3.add(but[six]);
+      panelSub3.add(Box.createHorizontalStrut(panelSub234Size));
       panelSub3.add(butMultiply);
 
       panelSub3.add(butDivide);
       panel.add(panelSub3);
-      panelSub4.add(but[Integer.parseInt(buttonValue[7])]);
-      panelSub4.add(but[Integer.parseInt(buttonValue[8])]);
-      panelSub4.add(but[Integer.parseInt(buttonValue[9])]);
-      panelSub4.add(Box.createHorizontalStrut(panelSub234_size));
+      panelSub4.add(but[seven]);
+      panelSub4.add(but[eight]);
+      panelSub4.add(but[nine]);
+      panelSub4.add(Box.createHorizontalStrut(panelSub234Size));
       panelSub4.add(butEqual);
       panelSub4.add(butCancel);
       panel.add(panelSub4);
 
-      final int panelSub5_size = 210;
+      final int panelSub5Size = 210;
       panelSub5.add(but[0]);
-      panelSub5.add(Box.createHorizontalStrut(panelSub5_size));
+      panelSub5.add(Box.createHorizontalStrut(panelSub5Size));
       panel.add(panelSub5);
       panelSub6.add(butSquare);
       panelSub6.add(butSquareRoot);
