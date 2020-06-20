@@ -92,7 +92,7 @@ public class Calculator {
 
     }
 
-    public Double calculateBi(BiOperatorModes newMode, Double num) {
+    public Double calculateBi(final BiOperatorModes newMode, final Double num) {
         if (mode == BiOperatorModes.NORMAL) {
             num2 = 0.0;
             num1 = num;
@@ -106,7 +106,7 @@ public class Calculator {
         }
     }
 
-    public Double calculateEqual(Double num) {
+    public Double calculateEqual(final Double num) {
         return calculateBi(BiOperatorModes.NORMAL, num);
     }
 
@@ -118,7 +118,10 @@ public class Calculator {
         return NaN;
     }
 
-    public Double calculateMono(MonoOperatorModes newMode, Double num) {
+    public Double calculateMono(
+            final MonoOperatorModes newMode, final Double num) {
+        final int angle = 180;
+        final int rightAngle = 90;
         if (newMode == MonoOperatorModes.SQUARE) {
             return num * num;
         }
@@ -135,10 +138,10 @@ public class Calculator {
             return Math.sin(num);
         }
         if (newMode == MonoOperatorModes.TAN) {
-            if (num == 0 || num % 180 == 0) {
+            if (num == 0 || num % angle == 0) {
                 return 0.0;
             }
-            if (num % 90 == 0 && num % 180 != 0) {
+            if (num % rightAngle == 0 && num % angle != 0) {
                 return NaN;
             }
 

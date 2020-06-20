@@ -93,15 +93,15 @@ public class UI implements ActionListener {
    /**This is a font of text.*/
    private final Font textFont;
    /**This is a size of font.*/
-   private final int font_size = 18;
+   private final int fontSize = 18;
    /**This is a size of font of text.*/
-   private final int textFont_size = 24;
+   private final int textFontSize = 24;
    /**This is a size of a button.*/
-   private final int JButton_size = 10;
+   private final int jButtonSize = 10;
    /**This is a frame size.*/
-   private final int frame_size = 450;
+   private final int frameSize = 450;
    /**This is a border of text area.*/
-   private final int border_text = 30;
+   private final int borderText = 30;
 
 
    public UI() throws IOException {
@@ -118,13 +118,13 @@ public class UI implements ActionListener {
       panelSub7 = new JPanel(new FlowLayout());
       panelSub8 = new JPanel(new FlowLayout());
 
-      font = new Font("Consolas", Font.PLAIN, font_size);
-      text = new JTextArea(1, border_text);
+      font = new Font("Consolas", Font.PLAIN, fontSize);
+      text = new JTextArea(1, borderText);
 
-      textFont = new Font("Consolas", Font.BOLD, textFont_size);
+      textFont = new Font("Consolas", Font.BOLD, textFontSize);
 
-      but = new JButton[JButton_size];
-      for (int i = 0; i < JButton_size; i++) {
+      but = new JButton[jButtonSize];
+      for (int i = 0; i < jButtonSize; i++) {
          but[i] = new JButton(String.valueOf(i)); }
 
       butAdd = new JButton("+");
@@ -147,7 +147,7 @@ public class UI implements ActionListener {
       calc = new Calculator();
    }
    public void init() {
-      frame.setSize(frame_size, frame_size);
+      frame.setSize(frameSize, frameSize);
       frame.setVisible(true);
 
       frame.setLocationRelativeTo(null);
@@ -158,7 +158,7 @@ public class UI implements ActionListener {
       text.setFont(textFont);
       text.setEditable(false);
 
-      for (int i = 0; i < JButton_size; i++) {
+      for (int i = 0; i < jButtonSize; i++) {
          but[i].setFont(font);
       }
       butAdd.setFont(font);
@@ -179,40 +179,50 @@ public class UI implements ActionListener {
       butCancel.setFont(font);
       butBinary.setFont(font);
 
-      final int panelSub1_size = 100;
-      panel.add(Box.createHorizontalStrut(panelSub1_size));
+      final int panelSub1Size = 100;
+      panel.add(Box.createHorizontalStrut(panelSub1Size));
       panelSub1.add(text);
       panel.add(panelSub1);
 
-      final int panelSub234_size = 15;
+      final int panelSub234Size = 15;
+      final int one = 1;
+      final int two = 2;
+      final int three = 3;
+      final int four = 4;
+      final int five = 5;
+      final int six = 6;
+      final int seven = 7;
+      final int eight = 8;
+      final int nine = 9;
 
-      panelSub2.add(but[Integer.parseInt(buttonValue[1])]);
-      panelSub2.add(but[Integer.parseInt(buttonValue[2])]);
-      panelSub2.add(but[Integer.parseInt(buttonValue[3])]);
-      panelSub2.add(Box.createHorizontalStrut(panelSub234_size));
+
+      panelSub2.add(but[one]);
+      panelSub2.add(but[two]);
+      panelSub2.add(but[three]);
+      panelSub2.add(Box.createHorizontalStrut(panelSub234Size));
       panelSub2.add(butAdd);
       panelSub2.add(butMinus);
       panel.add(panelSub2);
 
-      panelSub3.add(but[Integer.parseInt(buttonValue[4])]);
-      panelSub3.add(but[Integer.parseInt(buttonValue[5])]);
-      panelSub3.add(but[Integer.parseInt(buttonValue[6])]);
-      panelSub3.add(Box.createHorizontalStrut(panelSub234_size));
+      panelSub3.add(but[four]);
+      panelSub3.add(but[five]);
+      panelSub3.add(but[six]);
+      panelSub3.add(Box.createHorizontalStrut(panelSub234Size));
       panelSub3.add(butMultiply);
 
       panelSub3.add(butDivide);
       panel.add(panelSub3);
-      panelSub4.add(but[Integer.parseInt(buttonValue[7])]);
-      panelSub4.add(but[Integer.parseInt(buttonValue[8])]);
-      panelSub4.add(but[Integer.parseInt(buttonValue[9])]);
-      panelSub4.add(Box.createHorizontalStrut(panelSub234_size));
+      panelSub4.add(but[seven]);
+      panelSub4.add(but[eight]);
+      panelSub4.add(but[nine]);
+      panelSub4.add(Box.createHorizontalStrut(panelSub234Size));
       panelSub4.add(butEqual);
       panelSub4.add(butCancel);
       panel.add(panelSub4);
 
-      final int panelSub5_size = 210;
+      final int panelSub5Size = 210;
       panelSub5.add(but[0]);
-      panelSub5.add(Box.createHorizontalStrut(panelSub5_size));
+      panelSub5.add(Box.createHorizontalStrut(panelSub5Size));
       panel.add(panelSub5);
       panelSub6.add(butSquare);
       panelSub6.add(butSquareRoot);
@@ -228,7 +238,7 @@ public class UI implements ActionListener {
       panelSub8.add(butabs);
       panelSub8.add(butBinary);
       panel.add(panelSub8);
-      for (int i = 0; i < JButton_size; i++) {
+      for (int i = 0; i < jButtonSize; i++) {
          but[i].addActionListener(this); }
       butAdd.addActionListener(this);
       butMinus.addActionListener(this);
@@ -249,10 +259,10 @@ public class UI implements ActionListener {
       butCancel.addActionListener(this);
       frame.add(panel);
    }
-   @Override
-   public void actionPerformed(ActionEvent e) {
+
+   public void actionPerformed(final ActionEvent e) {
       final Object source = e.getSource();
-      for (int i = 0; i < JButton_size; i++) {
+      for (int i = 0; i < jButtonSize; i++) {
          if (source == but[i]) {
             text.replaceSelection(buttonValue[i]);
             return;
@@ -272,7 +282,8 @@ public class UI implements ActionListener {
          writer(calc.calculateBi(Calculator.BiOperatorModes.DIVIDE, reader()));
       }
       if (source == butxpowerofy) {
-         writer(calc.calculateBi(Calculator.BiOperatorModes.XPOWEROFY, reader()));
+         writer(calc.calculateBi(
+                 Calculator.BiOperatorModes.XPOWEROFY, reader()));
       }
       if (source == butSquare) {
          writer(calc.calculateMono(Calculator.MonoOperatorModes.SQUARE,
@@ -283,7 +294,8 @@ public class UI implements ActionListener {
                                    reader()));
       }
       if (source == butOneDevidedBy) {
-         writer(calc.calculateMono(Calculator.MonoOperatorModes.ONEDEVIDEDBY, reader()));
+         writer(calc.calculateMono(
+                 Calculator.MonoOperatorModes.ONEDEVIDEDBY, reader()));
       }
       if (source == butCos) {
          writer(calc.calculateMono(Calculator.MonoOperatorModes.COS,
