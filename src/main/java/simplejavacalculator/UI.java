@@ -282,7 +282,8 @@ public class UI implements ActionListener {
          writer(calc.calculateBi(Calculator.BiOperatorModes.DIVIDE, reader()));
       }
       if (source == butxpowerofy) {
-         writer(calc.calculateBi(Calculator.BiOperatorModes.XPOWEROFY, reader()));
+         writer(calc.calculateBi(
+                 Calculator.BiOperatorModes.XPOWEROFY, reader()));
       }
       if (source == butSquare) {
          writer(calc.calculateMono(Calculator.MonoOperatorModes.SQUARE,
@@ -293,7 +294,8 @@ public class UI implements ActionListener {
                                    reader()));
       }
       if (source == butOneDevidedBy) {
-         writer(calc.calculateMono(Calculator.MonoOperatorModes.ONEDEVIDEDBY, reader()));
+         writer(calc.calculateMono(
+                 Calculator.MonoOperatorModes.ONEDEVIDEDBY, reader()));
       }
       if (source == butCos) {
          writer(calc.calculateMono(Calculator.MonoOperatorModes.COS,
